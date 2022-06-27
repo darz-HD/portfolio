@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.main {
+  position: relative;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1478428036186-d435e23988ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMTEyODQ1fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.greeting {
+  position: absolute;
+  margin-top: 120px;
+  left: 38%;
+  background-color: white;
+  font-size: 70px;
+  z-index: 2;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.name {
+  position: absolute;
+  margin-top: 200px;
+  left: 35%;
+  background-color: black;
   color: white;
+  font-size: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.contactMe {
+  position: absolute;
+  margin-top: 430px;
+  left: 46%;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.parallax {
+  padding-top: 100px;
+  /* The image used */
+  background-image: url("https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742__340.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 7000px) {
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .greeting {
+    margin-top: 150px;
+    left: 30%;
+    font-size: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .name {
+    margin-top: 200px;
+    left: 27%;
+    font-size: 100px;
+  }
+
+  .contactMe {
+    margin-top: 380px;
+    left: 40%;
+  }
+}
+
+/* small mobile :320px. */
+@media (min-width: 499px) and (max-width: 767px) {
+}
+
+@media (min-width: 250px) and (max-width: 500px) {
+
+  .greeting {
+    margin-top: 150px;
+    left: 15%;
+    font-size: 40px;
+  }
+
+  .name {
+    margin-top: 200px;
+    left: 12%;
+    font-size: 80px;
+  }
+
+  .contactMe {
+    margin-top: 360px;
+    left: 30%;
   }
 }
